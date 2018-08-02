@@ -2,6 +2,12 @@
 
 $(document).ready(function() {
 
+    // $('.parallax').parallax();
+    // document.addEventListener('DOMContentLoaded', function() {
+    //     var elems = document.querySelectorAll('.parallax');
+    //     var instances = M.Parallax.init(elems, options);
+    // });
+
         let gifContainer = $("#gifs-container");
 
         const printGifs = (data) => {
@@ -55,6 +61,8 @@ $(document).ready(function() {
             //limpiando el input:
             $("#input").val("");
         })
+
+        // $(".parallax").parallax();
 });
 
 
@@ -68,8 +76,9 @@ const fillGifTemplate = (template, data) => {
     
     for(let property in data){
         let value = data[property];//Obteniendo el valor de la propiedad (en este el gif y la url)
-        //reemplazando los valores:
-        template = template.replace(new RegExp('{{'+property+'}}', 'g'), escapeHtml(value) );//esto podría ser así también /{{${property}}/g
+        //reemplazando los valores
+        template = template.replace(new RegExp('{{'+property+'}}', 'g'), escapeHtml(value) );//la expresión regular no puede ser así: /{{${property}}/g porque en la plantilla
+        //no tiene los acentos graves que permiten la ejecución de un template string.
                                                 
     };
     return template;
@@ -77,7 +86,7 @@ const fillGifTemplate = (template, data) => {
 }
 
 function escapeHtml(str) {
-    var div = document.createElement('div');
-    div.appendChild(document.createTextNode(str));
-    return div.innerHTML;
+    var div = document.createElement('div');//creando un div que no existe en el dom
+    div.appendChild(document.createTextNode(str));//agregando el value extrictamente como string
+    return div.innerHTML;//obteniendo el value "limpio"
 }

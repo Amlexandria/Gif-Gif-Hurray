@@ -1,3 +1,61 @@
-.brand-logo {
+
+
+nav {
+    position: fixed;
+    z-index: 10;
+    background-color: #2ECC71;
+}
+
+
+nav .brand-logo {
     font-family: 'Anton', sans-serif;
+    color: black;
+    margin-left: 2rem;
+}
+
+/* main #main {
+    margin-top: 5rem;
+} */
+
+.parallax-container {
+    height: 20rem;
+}
+
+
+
+div.input-field {
+      margin-top: 10rem;
+}
+
+.btn {
+    background-color: black;
+      margin-top: 10.5rem;
+      margin-left: 2rem;
+}
+
+.btn:hover {
+    background-color: #2ECC71;
+}
+
+div.card-content.white-text {
+    padding: 14px;
+    background-color:#1C2329;
+    /* border-radius: .5rem; */
+}
+
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating) {
+    color: white;
+    text-transform: none;
+}
+
+.card .card-action {
+    background-color: black;
+}
+
+.page-footer {
+    background-color: #2ECC71;
+}
+
+.page-footer .footer-copyright {
+    background-color: black;
 }
