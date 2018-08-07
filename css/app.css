@@ -1,4 +1,10 @@
+html {
+    height: 100%;
+}
 
+body {
+    height: 100%;
+}
 
 nav {
     position: fixed;
@@ -9,27 +15,25 @@ nav {
 
 nav .brand-logo {
     font-family: 'Anton', sans-serif;
-    color: black;
+    color: white;
     margin-left: 2rem;
 }
 
-/* main #main {
-    margin-top: 5rem;
-} */
 
-.parallax-container {
-    height: 20rem;
+#gifs-container {
+    float: left;
+}
+#content-template {
+    float: left;
 }
 
-
-
 div.input-field {
-      margin-top: 10rem;
+      margin-top: 6rem;
 }
 
 .btn {
     background-color: black;
-      margin-top: 10.5rem;
+      margin-top: 6.5rem;
       margin-left: 2rem;
 }
 
@@ -39,8 +43,12 @@ div.input-field {
 
 div.card-content.white-text {
     padding: 14px;
-    background-color:#1C2329;
+    background-color:#212121;
     /* border-radius: .5rem; */
+}
+
+#gifs-container {
+    margin-top: 13rem;
 }
 
 .card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating) {
@@ -52,8 +60,18 @@ div.card-content.white-text {
     background-color: black;
 }
 
+.input {
+    width: 100%;
+    position: fixed;
+    z-index: 5;
+    background-color: rgba(245, 245, 245, 0.8)
+}
+
 .page-footer {
     background-color: #2ECC71;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
 .page-footer .footer-copyright {

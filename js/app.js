@@ -88,5 +88,5 @@ const fillGifTemplate = (template, data) => {
 function escapeHtml(str) {
     var div = document.createElement('div');//creando un div que no existe en el dom
     div.appendChild(document.createTextNode(str));//agregando el value extrictamente como string
-    return div.innerHTML;//obteniendo el value "limpio"
+    return div.innerHTML;//obteniendo el value limpio"
 }
